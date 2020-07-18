@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundInput"
+    tools:context="com.example.omar.calculator.MainActivity">
+
+    <TextView
+        android:background="@color/backgroundInput"
+        android:id="@+id/tvShowNumber"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingBottom="6pt"
+        android:paddingEnd="4pt"
+        android:paddingTop="10pt"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="66sp" />
+
+    <TableLayout
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_marginBottom="1pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:onClick="clickClear"
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnAC"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="Ac"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+                android:onClick="clickNumber"
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnNegativeNum"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="+/-"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnPercent"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="%"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+
+                android:id="@+id/btnDivide"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:onClick="clickMakeOperation"
+                android:text="/"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="1pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:onClick="clickNumber"
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnNum7"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="7"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+                android:onClick="clickNumber"
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnNum8"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="8"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+                android:onClick="clickNumber"
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnNum9"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="9"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+                android:id="@+id/btnMultiple"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:onClick="clickMakeOperation"
+                android:text="*"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="1pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:onClick="clickNumber"
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnNum4"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="4"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+                android:onClick="clickNumber"
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnNum5"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="5"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+                android:onClick="clickNumber"
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnNum6"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="6"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+                android:id="@+id/btnSubtract"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:onClick="clickMakeOperation"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="1pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:onClick="clickNumber"
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnNum1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="1"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+                android:onClick="clickNumber"
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnNum2"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="2"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+                android:onClick="clickNumber"
+                android:layout_marginEnd="1pt"
+                android:background="@color/grey"
+                android:layout_weight="1"
+                android:id="@+id/btnNum3"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="3"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+            <Button
+                android:onClick="clickMakeOperation"
+                android:id="@+id/btnAdd"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_weight="1"
+                android:background="@color/orange"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                style="@style/RippleEffectStyle"/>
+
+
+
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="clickNumber"
+            android:layout_marginEnd="1pt"
+            android:background="@color/grey"
+            android:layout_weight="1"
+            android:id="@+id/btnNum0"
+            android:layout_width="60pt"
+            android:layout_height="30pt"
+            android:text="0"
+            android:textSize="18sp"
+            style="@style/RippleEffectStyle"/>
+
+        <Button
+            android:onClick="clickNumber"
+            android:layout_marginEnd="1pt"
+            android:background="@color/grey"
+            android:layout_weight="1"
+            android:id="@+id/btnDot"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:text="."
+            android:textSize="18sp"
+            style="@style/RippleEffectStyle"/>
+
+        <Button
+            android:onClick="clickShowResult"
+            android:background="@color/orange"
+            android:id="@+id/btnEqual"
+            android:layout_weight="1"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:text="="
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            style="@style/RippleEffectStyle"
+            />
+    </LinearLayout>
+</LinearLayout>
